@@ -9,86 +9,83 @@
 
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #0f172a;
-    color: #e2e8f0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    transition: 0.4s;
 }
 
 .container {
-    max-width: 600px;
-    padding: 40px 25px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
     text-align: center;
-    animation: fadeIn 1s ease;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    animation: fadeIn 1.5s ease;
 }
 
 .profile-pic {
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+    border: 5px solid #667eea;
     object-fit: cover;
-    border: 3px solid #334155;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    animation: float 3s ease-in-out infinite;
 }
 
 h1 {
-    font-size: 32px;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 
-.subtitle {
-    color: #94a3b8;
-    margin-bottom: 30px;
-    font-size: 16px;
-}
-
-.section {
-    margin-top: 35px;
-}
-
-.section h2 {
-    font-size: 18px;
-    margin-bottom: 15px;
-    color: #cbd5e1;
-    letter-spacing: 1px;
-}
-
-.section p {
-    margin: 8px 0;
-    color: #94a3b8;
-    transition: 0.3s;
-}
-
-.section p:hover {
-    color: white;
-}
-
-.buttons {
-    margin-top: 35px;
+h2 {
+    margin-top: 30px;
 }
 
 button {
-    background: #1e293b;
+    background: #667eea;
     color: white;
-    border: 1px solid #334155;
-    padding: 10px 22px;
-    margin: 8px;
-    border-radius: 6px;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 button:hover {
-    background: #334155;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    background: #5a67d8;
 }
 
+/* Animations */
+
 @keyframes fadeIn {
-    from {opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Dark Mode */
+
+.dark {
+    background: #111;
+}
+
+.dark .container {
+    background: #1e1e1e;
+    color: white;
 }
 
 </style>
@@ -100,37 +97,36 @@ button:hover {
 
     <img src="profile.jpg" alt="Saurabh" class="profile-pic">
 
-    <h1>Hello, I'm Saurabh</h1>
-    <div class="subtitle">Class 12 Student • Aspiring Computer Science Student</div>
+    <h1>Hello, I'm Saurabh 👋</h1>
+    <p>Class 12 Student | Aspiring Computer Science Student</p>
 
-    <div class="section">
-        <h2>SKILLS</h2>
-        <p>Python Programming</p>
-        <p>Problem Solving</p>
-        <p>GitHub Projects</p>
-    </div>
+    <h2>Skills</h2>
+    <p>Python Programming</p>
+    <p>Problem Solving</p>
+    <p>GitHub Projects</p>
 
-    <div class="section">
-        <h2>PROJECTS</h2>
-        <p>Student Marks Management System</p>
-        <p>Menu Driven Calculator</p>
-    </div>
+    <h2>Projects</h2>
+    <p>Student Marks Management System</p>
+    <p>Menu Driven Calculator</p>
 
-    <div class="section">
-        <h2>CONTACT</h2>
-        <p>saurabhrajput008@gmail.com</p>
-    </div>
+    <h2>Contact</h2>
+    <p>Email: saurabhrajput008@gmail.com</p>
 
-    <div class="buttons">
-        <button onclick="visitGitHub()">GitHub</button>
-    </div>
+    <button onclick="visitGitHub()">Visit My GitHub</button>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
 </div>
 
 <script>
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+}
+
 function visitGitHub() {
     window.open("https://github.com/Saurabh0x0", "_blank");
 }
+
 </script>
 
 </body>
