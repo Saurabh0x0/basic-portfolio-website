@@ -1,10 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Saurabh Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saurabh Portfolio</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: 0.3s;
+}
+
+.container {
+    background: white;
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #667eea;
+}
+
+h1 {
+    margin: 10px 0;
+    color: #333;
+}
+
+h2 {
+    margin-top: 25px;
+    color: #444;
+}
+
+p {
+    color: #555;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 5px 0;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #667eea;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5563c1;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #121212;
+}
+
+.dark-mode .container {
+    background: #1e1e1e;
+    color: white;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode p,
+.dark-mode li {
+    color: white;
+}
+</style>
 </head>
+
 <body>
+
+<div class="container">
+
+    <!-- 🔥 IMPORTANT: This is RAW GitHub image link -->
+    <img src="https://raw.githubusercontent.com/Saurabh0x0/basic-portfolio-website/main/profile.jpg" 
+         alt="Saurabh" 
+         class="profile-pic">
 
     <h1>Hello, I'm Saurabh 👋</h1>
     <p>Class 12 Student | Aspiring Computer Science Student</p>
@@ -12,16 +110,34 @@
     <h2>Skills</h2>
     <ul>
         <li>Python Programming</li>
-        <li>Basic Problem Solving</li>
+        <li>Problem Solving</li>
         <li>GitHub Projects</li>
     </ul>
 
     <h2>Projects</h2>
-    <p>1. Student Marks Management System</p>
-    <p>2. Menu Driven Calculator</p>
+    <p>Student Marks Management System</p>
+    <p>Menu Driven Calculator</p>
 
     <h2>Contact</h2>
     <p>Email: saurabhrajput008@gmail.com</p>
+
+    <button onclick="window.open('https://github.com/Saurabh0x0')">
+        Visit My GitHub
+    </button>
+
+    <br>
+
+    <button onclick="toggleDarkMode()">
+        Toggle Dark Mode
+    </button>
+
+</div>
+
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}
+</script>
 
 </body>
 </html>
