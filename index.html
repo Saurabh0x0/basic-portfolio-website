@@ -1,133 +1,170 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Saurabh Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurabh Portfolio</title>
 
-<style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    transition: 0.4s;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            transition: 0.4s;
+            padding: 20px;
+        }
 
-.container {
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 20px;
-    text-align: center;
-    width: 90%;
-    max-width: 500px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-    animation: fadeIn 1.5s ease;
-}
+        .card {
+            background: #f8fafc;
+            width: 100%;
+            max-width: 500px;
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+            animation: fadeIn 0.8s ease-in-out;
+            transition: 0.4s;
+        }
 
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid #667eea;
-    object-fit: cover;
-    margin-bottom: 20px;
-    animation: float 3s ease-in-out infinite;
-}
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-h1 {
-    margin: 10px 0;
-}
+        .profile-pic {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 6px solid #667eea;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
 
-h2 {
-    margin-top: 30px;
-}
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
 
-button {
-    background: #667eea;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    margin: 10px 5px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-}
+        p {
+            color: #555;
+            margin-bottom: 15px;
+        }
 
-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    background: #5a67d8;
-}
+        h2 {
+            margin-top: 25px;
+            margin-bottom: 10px;
+            font-size: 22px;
+        }
 
-/* Animations */
+        .btn {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: #667eea;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+        }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+        .btn:hover {
+            background: #5a67d8;
+            transform: translateY(-2px);
+        }
 
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
-}
+        /* DARK MODE */
 
-/* Dark Mode */
+        .dark {
+            background: linear-gradient(135deg, #111827, #1f2937);
+        }
 
-.dark {
-    background: #111;
-}
+        .dark .card {
+            background: #1e293b;
+            color: white;
+        }
 
-.dark .container {
-    background: #1e1e1e;
-    color: white;
-}
+        .dark p {
+            color: #cbd5e1;
+        }
 
-</style>
+        .dark .btn {
+            background: #334155;
+        }
+
+        .dark .btn:hover {
+            background: #475569;
+        }
+
+    </style>
 </head>
 
 <body>
 
-<div class="container">
+    <div class="card">
 
-    <img src="profile.jpg" alt="Saurabh" class="profile-pic">
+        <img src="profile.jpg" alt="Saurabh" class="profile-pic">
 
-    <h1>Hello, I'm Saurabh 👋</h1>
-    <p>Class 12 Student | Aspiring Computer Science Student</p>
+        <h1>Hello, I'm Saurabh 👋</h1>
+        <p>Class 12 Student | Aspiring Computer Science Student</p>
 
-    <h2>Skills</h2>
-    <p>Python Programming</p>
-    <p>Problem Solving</p>
-    <p>GitHub Projects</p>
+        <h2>Skills</h2>
+        <p>Python Programming</p>
+        <p>Problem Solving</p>
+        <p>GitHub Projects</p>
 
-    <h2>Projects</h2>
-    <p>Student Marks Management System</p>
-    <p>Menu Driven Calculator</p>
+        <h2>Projects</h2>
 
-    <h2>Contact</h2>
-    <p>Email: saurabhrajput008@gmail.com</p>
+        <a href="https://github.com/Saurabh0x0/student-marks-management-system"
+           target="_blank"
+           class="btn">
+           Student Marks Management System
+        </a>
 
-    <button onclick="visitGitHub()">Visit My GitHub</button>
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+        <a href="https://github.com/Saurabh0x0/menu-driven-calculator"
+           target="_blank"
+           class="btn">
+           Menu Driven Calculator
+        </a>
 
-</div>
+        <h2>Contact</h2>
+        <p>Email: saurabhrajput008@gmail.com</p>
 
-<script>
+        <a href="https://github.com/Saurabh0x0"
+           target="_blank"
+           class="btn">
+           Visit My GitHub
+        </a>
 
-function toggleDarkMode() {
-    document.body.classList.toggle("dark");
-}
+        <button class="btn" onclick="toggleDark()">
+            Toggle Dark Mode
+        </button>
 
-function visitGitHub() {
-    window.open("https://github.com/Saurabh0x0", "_blank");
-}
+    </div>
 
-</script>
+    <script>
+        function toggleDark() {
+            document.body.classList.toggle("dark");
+        }
+    </script>
 
 </body>
 </html>
