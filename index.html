@@ -1,170 +1,205 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saurabh Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saurabh Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            transition: 0.4s;
-            padding: 20px;
-        }
+<style>
 
-        .card {
-            background: #f8fafc;
-            width: 100%;
-            max-width: 500px;
-            padding: 40px 30px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-            animation: fadeIn 0.8s ease-in-out;
-            transition: 0.4s;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6a75d8, #7b4fd6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+.container {
+    background: #f2f2f2;
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
 
-        .profile-pic {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            border: 6px solid #667eea;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 6px solid #6a75d8;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
 
-        h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
+h1 {
+    margin: 10px 0;
+    font-size: 28px;
+}
 
-        p {
-            color: #555;
-            margin-bottom: 15px;
-        }
+.subtitle {
+    color: #555;
+    margin-bottom: 25px;
+}
 
-        h2 {
-            margin-top: 25px;
-            margin-bottom: 10px;
-            font-size: 22px;
-        }
+h2 {
+    margin-top: 25px;
+}
 
-        .btn {
-            display: block;
-            width: 100%;
-            margin: 10px 0;
-            padding: 12px;
-            border: none;
-            border-radius: 10px;
-            background: #667eea;
-            color: white;
-            font-size: 14px;
-            cursor: pointer;
-            transition: 0.3s;
-            text-decoration: none;
-        }
+.skills p {
+    margin: 8px 0;
+    color: #444;
+}
 
-        .btn:hover {
-            background: #5a67d8;
-            transform: translateY(-2px);
-        }
+.project-btn {
+    display: block;
+    background: #6a75d8;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 12px;
+    transition: 0.3s;
+}
 
-        /* DARK MODE */
+.project-btn:hover {
+    background: #5562c7;
+}
 
-        .dark {
-            background: linear-gradient(135deg, #111827, #1f2937);
-        }
+.social-icons {
+    margin: 15px 0;
+}
 
-        .dark .card {
-            background: #1e293b;
-            color: white;
-        }
+.social-icons a {
+    font-size: 28px;
+    margin: 0 14px;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
-        .dark p {
-            color: #cbd5e1;
-        }
+/* Real Brand Colors */
+.social-icons a:nth-child(1) {
+    color: #000000; /* GitHub */
+}
 
-        .dark .btn {
-            background: #334155;
-        }
+.social-icons a:nth-child(2) {
+    color: #0A66C2; /* LinkedIn */
+}
 
-        .dark .btn:hover {
-            background: #475569;
-        }
+.social-icons a:nth-child(3) {
+    color: #D44638; /* Email */
+}
 
-    </style>
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.main-btn {
+    display: block;
+    background: #6a75d8;
+    color: white;
+    text-decoration: none;
+    padding: 14px;
+    margin: 15px 0;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background: #5562c7;
+}
+
+.toggle-btn {
+    display: block;
+    background: #6a75d8;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 14px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    background: #5562c7;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #1a1a1a;
+    color: white;
+}
+
+.dark-mode .container {
+    background: #2a2a2a;
+}
+
+.dark-mode .subtitle,
+.dark-mode .skills p {
+    color: #ccc;
+}
+
+</style>
 </head>
 
 <body>
 
-    <div class="card">
+<div class="container">
 
-        <img src="profile.jpg" alt="Saurabh" class="profile-pic">
+<img src="profile.jpg" class="profile-img">
 
-        <h1>Hello, I'm Saurabh 👋</h1>
-        <p>Class 12 Student | Aspiring Computer Science Student</p>
+<h1>Hello, I'm Saurabh 👋</h1>
+<p class="subtitle">Class 12 Student | Aspiring Computer Science Student</p>
 
-        <h2>Skills</h2>
-        <p>Python Programming</p>
-        <p>Problem Solving</p>
-        <p>GitHub Projects</p>
+<h2>Skills</h2>
+<div class="skills">
+<p>Python Programming</p>
+<p>Problem Solving</p>
+<p>GitHub Projects</p>
+</div>
 
-        <h2>Projects</h2>
+<h2>Projects</h2>
 
-        <a href="https://github.com/Saurabh0x0/student-marks-management-system"
-           target="_blank"
-           class="btn">
-           Student Marks Management System
-        </a>
+<a class="project-btn" href="https://github.com/Saurabh0x0/student-marks-management-system" target="_blank">
+Student Marks Management System
+</a>
 
-        <a href="https://github.com/Saurabh0x0/menu-driven-calculator"
-           target="_blank"
-           class="btn">
-           Menu Driven Calculator
-        </a>
+<a class="project-btn" href="https://github.com/Saurabh0x0/menu-driven-calculator" target="_blank">
+Menu Driven Calculator
+</a>
 
-        <h2>Contact</h2>
-        <p>Email: saurabhrajput008@gmail.com</p>
+<h2>Contact</h2>
+<p>Email: saurabhrajput008@gmail.com</p>
 
-        <a href="https://github.com/Saurabh0x0"
-           target="_blank"
-           class="btn">
-           Visit My GitHub
-        </a>
+<div class="social-icons">
+<a href="https://github.com/Saurabh0x0" target="_blank"><i class="fab fa-github"></i></a>
+<a href="https://linkedin.com/in/saurabh-rajput-749159347" target="_blank"><i class="fab fa-linkedin"></i></a>
+<a href="mailto:saurabhrajput008@gmail.com"><i class="fas fa-envelope"></i></a>
+</div>
 
-        <button class="btn" onclick="toggleDark()">
-            Toggle Dark Mode
-        </button>
+<a class="main-btn" href="https://github.com/Saurabh0x0" target="_blank">
+Visit My GitHub
+</a>
 
-    </div>
+<button class="toggle-btn" onclick="toggleDarkMode()">
+Toggle Dark Mode
+</button>
 
-    <script>
-        function toggleDark() {
-            document.body.classList.toggle("dark");
-        }
-    </script>
+</div>
+
+<script>
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}
+</script>
 
 </body>
 </html>
